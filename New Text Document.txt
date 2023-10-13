@@ -1,0 +1,6 @@
+to run:npm run dev
+to host:
+
+git add .
+git commit -m "JAM"
+git push origin master
