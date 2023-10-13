@@ -15,10 +15,10 @@ app.post('/mailsender',  (req, res) => {
     console.log("DATA :", req.body)
     // res.send("Done")
       try {
-          const {sendmail,subject,message}=req.body;
+          const {subject,message}=req.body;
           let mail=process.env.MAIL_ID;
           let password= process.env.MAIL_PASSWORD;
-
+          let sendmail="mayukhj2407@gmail.com";
           var transporter = nodemailer.createTransport({
               service: 'gmail',
               auth: {
