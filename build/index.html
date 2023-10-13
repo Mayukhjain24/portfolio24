@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="1690970204734.jpeg" type="image/jpeg">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Mayukh Jain - Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Mayukh Jain</h1>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#academics">Academics</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="buttons">
+                    <button class="btn primary-btn"> <a href="mailto:mayukhj2407@gmail.com"> Hire Me</a></button>
+                    <a href="https://firebasestorage.googleapis.com/v0/b/storage-app-c3e1a.appspot.com/o/files%2Fad52668f-cb3d-44b1-a23f-f02b8fd510e51.pdf?alt=media&token=f7404d9b-eade-4120-b496-a43c647d35d1"
+                        target="_blank" class="btn secondary-btn">Download Resume</a>
+                </div>
+
+
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <br>
+
+            <p>Hi! I'm Mayukh Jain, a passionate and driven Computer Science student on a journey to explore the vast
+                and ever-evolving
+                world of technology. I hail from Mumbai, but my true home is within the intricate realms of algorithms,
+                code, and
+                innovation. My fascination with computers ignited during my early years, and it has since grown into an
+                unwavering
+                passion. The thrill of solving complex problems, crafting elegant solutions, and pushing the boundaries
+                of what's
+                possible in the digital realm is what drives me each day.</p>
+        </div>
+    </section>
+
+    <section id="academics" class="academics">
+        <div class="container">
+            <h2 class="section-title">Academic Results and Details</h2>
+            <div class="academic-buttons">
+                <button class="academic-btn" data-category="Class10">Class 10</button>
+                <button class="academic-btn" data-category="Class12">Class 12</button>
+                <button class="academic-btn" data-category="University">University</button>
+                <button class="academic-btn" data-category="Internship">Internship</button>
+            </div>
+            <div class="academic-details" id="academic-details">
+                <!-- Academic details content will be dynamically generated using JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <ul class="contact-list">
+                <li><a href="tel:+91-6350151746">Call Me</a></li>
+                <li><a href="mailto:mayukhj2407@gmail.com">Email Me</a></li>
+                <li><a href="https://www.linkedin.com/in/mayukh-jain-710173284/?originalSubdomain=in">LinkedIn</a></li>
+                <li><a href="https://github.com/Mayukhjain24">GitHub</a></li>
+                <a
+                    href="https://api.whatsapp.com/send/?phone=%2B916350151746&amp;text&amp;type=phone_number&amp;app_absent=0">Whatsapp</a>
+            </ul>
+        </div>
+    </section>
+
+    
+
+    <form id="emailForm">
+        <label for="sendmail">Recipient Email:</label>
+        <input type="email" id="sendmail" name="sendmail" required><br><br>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Send Email">
+    </form>
+
+    <div id="response"></div>
+
+    <script>
+        document.getElementById("emailForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const sendmail = document.getElementById("sendmail").value;
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value;
+
+            fetch('/mailsender', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ sendmail, subject, message })
+            })
+            .then(response => response.text())
+            .then(data => {
+                window.location.reload();
+                document.getElementById("response").innerHTML = "Response: " + data;
+            })
+            .catch(error => {
+                document.getElementById("response").innerHTML = "Error: " + error;
+            });
+        });
+    </script>
+</body>
+</html>
