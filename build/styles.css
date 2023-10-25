@@ -20,7 +20,6 @@ body {
 /* Style the header with a background image and text */
 header {
     background-image: url('your-background-image.jpg');
-    /* Replace with your image URL */
     background-size: cover;
     text-align: center;
     padding: 100px 0;
@@ -48,7 +47,6 @@ nav li {
 nav a {
     text-decoration: none;
     color: #00a0e4;
-    /* Blue color */
     font-size: 1.2rem;
     font-weight: 600;
     transition: color 0.3s ease;
@@ -76,30 +74,23 @@ nav a:hover {
 
 .primary-btn {
     background-image: linear-gradient(50deg, rgba(8, 3, 53, 0.847), rgb(50, 4, 41));
-   color: #fff;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #fff;
 }
 
 .primary-btn:hover {
     background-color: #0078a8;
-    /* Darker blue on hover */
 }
 
 .secondary-btn {
-background-image: linear-gradient(60deg, rgba(40, 37, 67, 0.847), rgb(50, 4, 41));
-   
-    /* Blue color */
+    background-image: linear-gradient(60deg, rgba(40, 37, 67, 0.847), rgb(50, 4, 41));
     color: #00a0e4;
-    /* Blue color */
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .secondary-btn:hover {
     background-color: #0078a8;
-    /* Darker blue on hover */
     color: #fff;
     border-color: #0078a8;
-    /* Darker blue border on hover */
 }
 
 /* Style the About section */
@@ -121,7 +112,7 @@ background-image: linear-gradient(60deg, rgba(40, 37, 67, 0.847), rgb(50, 4, 41)
 
 /* Style the Academics section */
 .academics {
-background-image: linear-gradient(90deg, rgba(52, 44, 142, 0.847), rgb(6, 55, 48));
+    background-image: linear-gradient(90deg, rgba(52, 44, 142, 0.847), rgb(6, 55, 48));
     color: #fff;
     padding: 50px 0;
 }
@@ -142,9 +133,7 @@ background-image: linear-gradient(90deg, rgba(52, 44, 142, 0.847), rgb(6, 55, 48
 .academic-btn {
     background-color: transparent;
     border: 2px solid #00a0e4;
-    /* Blue color */
     color: #00a0e4;
-    /* Blue color */
     padding: 10px 20px;
     font-size: 1rem;
     margin: 0 10px;
@@ -156,16 +145,13 @@ background-image: linear-gradient(90deg, rgba(52, 44, 142, 0.847), rgb(6, 55, 48
 
 .academic-btn:hover {
     background-color: #0078a8;
-    /* Darker blue on hover */
     color: #fff;
     border-color: #0078a8;
-    /* Darker blue border on hover */
 }
 
 .academic-details {
     text-align: center;
-   background-image: linear-gradient(60deg, rgba(39, 21, 232, 0.196), rgb(6, 55, 48));
-    /* Dark gray background */
+    background-image: linear-gradient(60deg, rgba(39, 21, 232, 0.196), rgb(6, 55, 48));
     border-radius: 10px;
 }
 
@@ -174,7 +160,6 @@ background-image: linear-gradient(90deg, rgba(52, 44, 142, 0.847), rgb(6, 55, 48
     font-weight: bold;
     margin-bottom: 10px;
     color: #00a0e4;
-    /* Blue color */
 }
 
 .academic-details p {
@@ -189,34 +174,35 @@ background-image: linear-gradient(90deg, rgba(52, 44, 142, 0.847), rgb(6, 55, 48
     padding: 50px 0;
 }
 
-.contact-list {
+.contact-icons {
     list-style: none;
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
 }
 
-.contact-list li {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
+.contact-icons li {
+    margin: 0 15px;
 }
 
-.contact-list a {
+.contact-icons a {
     text-decoration: none;
     color: #00a0e4;
-    /* Blue color */
-    font-weight: bold;
+    font-size: 2rem;
     transition: color 0.3s ease;
 }
 
-.contact-list a:hover {
-    color: #fff;
+.contact-icons a:hover {
+    color: #0078a8;
+    transform: scale(1.1);
+    /* Slight scaling on hover */
 }
-
 
 /* Style for the form container */
 form {
     max-width: 400px;
     margin: 0 auto;
- background-image: linear-gradient(55deg, black, transparent);
+    background-image: linear-gradient(55deg, black, transparent);
     padding: 45px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
